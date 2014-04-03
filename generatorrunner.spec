@@ -1,12 +1,12 @@
 #
 # Conditional build:
 %bcond_without	apidocs		# API documentation
-#
+
 Summary:	Generator Runner - calling binding generator front-ends
 Summary(pl.UTF-8):	Generator Runner - wywoływanie frontendów generatorów wiązań
 Name:		generatorrunner
 Version:	0.6.16
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Development/Tools
 Source0:	https://github.com/PySide/Generatorrunner/archive/%{version}.tar.gz?/%{name}-%{version}.tar.gz
@@ -41,6 +41,9 @@ Pliki nagłówkowe dla biblioteki oraz wtyczek Generator Runnera.
 Summary:	Generator Runner API documentation
 Summary(pl.UTF-8):	Dokumentacja API Generator Runnera
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 Generator Runner API documentation.
@@ -56,12 +59,10 @@ install -d build
 cd build
 %cmake ..
 %{__make}
-
 %{?with_apidocs:%{__make} doc}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
