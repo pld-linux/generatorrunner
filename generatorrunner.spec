@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	apidocs		# API documentation
+%bcond_with	apidocs		# API documentation
 
 Summary:	Generator Runner - calling binding generator front-ends
 Summary(pl.UTF-8):	Generator Runner - wywoływanie frontendów generatorów wiązań
