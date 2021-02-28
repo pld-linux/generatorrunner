@@ -41,9 +41,7 @@ Pliki nagłówkowe dla biblioteki oraz wtyczek Generator Runnera.
 Summary:	Generator Runner API documentation
 Summary(pl.UTF-8):	Dokumentacja API Generator Runnera
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 Generator Runner API documentation.
