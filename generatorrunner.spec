@@ -9,7 +9,8 @@ Version:	0.6.16
 Release:	2
 License:	GPL v2
 Group:		Development/Tools
-Source0:	https://github.com/PySide/Generatorrunner/archive/%{version}.tar.gz?/%{name}-%{version}.tar.gz
+#Source0Download: https://github.com/PySide/Generatorrunner/releases
+Source0:	https://github.com/PySide/Generatorrunner/archive/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	34e60a01f574e5976279510fa9c9069a
 URL:		https://github.com/PySide/Generatorrunner
 BuildRequires:	QtCore-devel >= 4.5.0
