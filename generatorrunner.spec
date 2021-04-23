@@ -16,6 +16,7 @@ URL:		https://github.com/PySide/Generatorrunner
 BuildRequires:	QtCore-devel >= 4.5.0
 BuildRequires:	apiextractor-devel >= 0.10.10
 BuildRequires:	cmake >= 2.6
+BuildRequires:	rpm-build >= 4.6
 %{?with_apidocs:BuildRequires:	sphinx-pdg}
 Requires:	apiextractor >= 0.10.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
